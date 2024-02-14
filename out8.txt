@@ -1,0 +1,22 @@
+# Source Generated with Decompyle++
+# File: pyi_rth_win32comgenpy.pyc (Python 3.7)
+
+import atexit
+import os
+import shutil
+import tempfile
+supportdir = tempfile.mkdtemp()
+genpydir = os.path.join(supportdir, 'gen_py')
+
+try:
+    os.makedirs(genpydir)
+    atexit.register(shutil.rmtree, supportdir, True, **('ignore_errors',))
+except OSError:
+    pass
+
+import win32com
+win32com.__gen_path__ = genpydir
+if hasattr(win32com, '__loader__'):
+    del win32com.__loader__
+import win32com.gen_py as win32com
+win32com.gen_py.__path__.insert(0, genpydir)

@@ -1,0 +1,4 @@
+# Source Generated with Decompyle++
+# File: pyi_rth_win32api.pyc (Python 3.7)
+
+import pywintypes
